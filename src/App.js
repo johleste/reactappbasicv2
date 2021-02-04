@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import './App.css';
 import './component/notfound/Notfound.css';
 import Welcome from './component/WELCOME/Welcome'
@@ -11,12 +11,12 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-       <Switch>
-      <Route exact path="/" render={(props) =><Welcome {...props} name='John'/>}/>
-      <Route path="/welcome/:name" render={(props) => <Welcome name= {props.match.params.name}/>} />
-      <Route path="/Clock" component={Clock} />
-      <Route path ="/Contact" component={Contact}/>
-      <Route NoMatch component={notFound} />
+      <Switch>
+        <Route exact path="/" render={(props) => <Welcome {...props} name='John' />} />
+        <Route path="/welcome/:name" render={(props) => <Welcome name={props.match.params.name} />} />
+        <Route path="/Clock" component={Clock} />
+        <Route path="/Contact" component={Contact} />
+        <Route NoMatch component={notFound} />
       </Switch>
     </div>
   );
